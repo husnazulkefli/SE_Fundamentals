@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>MMU Invoicing System</title>
+<style>
+	body{
+	background-color: #6fa8f6;
+	font-family: "Arial Rounded MT Bold", "MS Sans Serif", "sans-serif";
+	text-align: center;
+}
+    .myTable {
+		text-align: left;
+      margin-left: auto; 
+      margin-right: auto;
+    }
+    .center{
+        
+        text-align: center;
+        vertical-align: top;
+        margin: 0 4px;
+    }
+    .button{
+        background-color: #2678F3;
+	border: none;
+	border-radius: 8px;
+	color: white;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 3px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body >
+
+<div>
+  <a >
+	<button class="button" style="float:left;"> Main Page</button>
+	  <button class="button" style="float: right;">Logout </button> 
+	</a>
+</div>
+	<br><br>
+	<h1>Customer View Invoice</h1>
+<div class="myTable">
+<table class="myTable">
+    <tr>
+        <td>Choose Invoice ID:</td>
+        <td><select type="text" id="invoice_id" /></td>
+    </tr>
+    <tr>
+        <td>Invoice: </td>
+        <td><input type="text" id="invoice"></td>
+    </tr>
+    
+</table>
+<br>
+</div>
+<div class="center">
+    <button class="button" onclick="alert('download Invoice to device')">Print</button>
+    <button class="button" onclick="alert('direct to Customer Main Menu')">Back</button>
+</div>
+
+</body>
+</html>

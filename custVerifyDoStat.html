@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>MMU Invoicing System</title>
+<style> 
+body {
+  font-family: "Arial Rounded MT Bold", "MS Reference Sans Serif", "MS Sans Serif", "sans-serif";
+  background-color: #6fa8f6;
+}
+    .myTable {  
+      margin-left: auto; 
+      margin-right: auto;
+    }
+    .center{
+        text-align: center;
+        vertical-align: top;
+        margin: 0 4px;
+    }
+    .button{
+		background-color: #2678F3;
+	border: none;
+	border-radius: 8px;
+	color: white;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 3px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body >
+<div>
+  <a >
+	<button class="button" style="float:left;"> Main Page</button>
+	  <button class="button" style="float: right;">Logout </button> 
+	</a>
+</div>
+	<br><br><br>
+<h1 class="center" style="font-size:200%;">Customer Verify Delivery Order</h1>
+<br>
+<table class="myTable">
+    <tr>
+        <td>Choose a Delivery Order ID:</td>
+        <td><select type="text" id="invoice_id" /></td>
+    </tr>
+    <tr>
+        <td>Status: </td>
+        <td><input type="radio" id="delivered" value="Delivered">
+  <label for="delivered">Delivered</label>
+  <input type="radio" id="notdelivered" value="notdelivered">
+  <label for="delivered">Not Delivered</label><br></td>
+    </tr>
+    
+</table>
+<br>
+
+<div class="center">
+    <button class="button" onclick="alert('confirm verification')">Verify</button>
+    <button class="button" onclick="alert('send report to courrier')">Report</button>
+    <button class="button" onclick="alert('direct to Customer Main Menu')">Back</button>
+</div>
+
+</body>
+</html>

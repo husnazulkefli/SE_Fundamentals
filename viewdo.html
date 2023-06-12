@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+	<style>
+body{
+	background-color: #6fa8f6;
+	font-family: "Arial Rounded MT Bold", "MS Sans Serif", "sans-serif";
+	text-align: center;
+}
+
+button {
+	background-color: #2678F3;
+	border: none;
+	border-radius: 8px;
+	color: white;
+  padding: 6px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 3px;
+}
+page {
+	text-align: center;
+  background: #70AFCA;
+  display: block;
+	border: none;
+	border-radius: 8px;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.1cm rgba(0,0,0,0.5);
+}
+page[size="A4"] {  
+  width: 30cm;
+  height: 21cm; 
+}
+page[size="A4"][layout="landscape"] {
+  width: 29.7cm;
+  height: 21cm;  
+}
+	img {
+  width: 15px;
+  height: 15px;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+
+}
+		.rowNumber {
+  margin-left: auto;
+  margin-right: auto;
+  counter-reset: step;
+  position: relative;
+}
+.rowNumbers {
+  margin-left: auto;
+  margin-right: auto;
+  counter-reset: step;
+  position: relative;
+}
+
+/* In every HTML element with a class of .rowNumbers, find every table data element that is the first child of its parent (which would be a table row), and create a pseudo element before that table data cell */
+.rowNumbers td:first-child:before {
+  
+  /* Increment the "step" counter */
+  counter-increment: step;
+  
+  /* Display the counter named "step" in a decimal format */
+  content: counter(step, decimal);
+  color: black;
+  
+  /* Because there's an ancestor with relative positioning, this pseudo element will be positioned absolutely in relation to that ancestor */
+  position: absolute;
+  left: -16px;
+}
+		table{
+			
+			text-align: left;
+		}
+
+	</style>
+<meta charset="utf-8">
+<title>ViewDeliveryOrder</title>
+</head>
+
+<body>
+<div class="topnav">
+  <a >
+	<button style="float:left;"> Main Page</button>
+	  <button style="float: right;">Logout </button> 
+  </a>
+</div>
+<div><p><br><br><br></p></div>
+	<page size="A4"><p><br></p>
+	  View Delivery Order 
+	  <p><br></p>
+	<table style="width:90%" class="center" table-layout= "auto">
+  <tbody>
+    <tr>
+      <td>Customer ID</td>
+      <td><form id="form" role="search">
+      <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content">
+      <button type="submit">Search</button>
+    </form>
+    </td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td>Delivery Order ID</td>
+      <td><form id="form1" role="search">
+      <input type="search" id="query1" name="q" placeholder="Search..." aria-label="Search through site content">
+      <button type="submit">Search</button>
+    </form></td>
+    </tr>
+    <tr>
+      <td>Customer Name</td>
+      <td><input type="text" name="textfield" id="textfield" ></td>
+      <td>&nbsp;</td>
+      <td>Courier ID</td>
+      <td><input type="text">
+    </td>
+    </tr>
+    <tr>
+      <td>Delivery Address</td>
+      <td><textarea id="address" name="address" rows="4" cols="50"></textarea></td>
+      <td>&nbsp;</td>
+      <td>Issued Date</td>
+      <td><input type="date" id="date" /></td>
+    </tr>
+  </tbody>
+</table>
+		
+<br>
+<div>
+	<br><br><br>
+<table  style="width:90%" class="rowNumber">
+	<col style="width:45%">
+	<col style="width:15%">
+	<col style="width:15%">
+	<col style="width:15%">
+	<tr>
+    <td>Item(s)</td>
+    <td>Quantity</td>
+    <td>Price per Unit (RM)</td>
+    <td>Amount (RM)</td>
+  </tr>
+	</table>
+  <table id="myTable" class="rowNumbers" style="width:90%" >
+	<col style="width:45%">
+	<col style="width:15%">
+	<col style="width:15%">
+	<col style="width:15%">
+  <tr>
+    <td>item</td>
+    <td>1</td>
+    <td>price</td>
+    <td>amount</td>
+  </tr>
+  <tr>
+    <td>item</td>
+    <td>1</td>
+    <td>price</td>
+    <td>amount</td>
+  </tr>
+</table>
+<br>
+<br>
+	<h1><br></h1>
+	</div>
+<div align="right">Grand Total <input type="text"/></div>
+	</page>
+</body>
+</html>
